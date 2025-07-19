@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login-page</title>
+    <link rel="stylesheet" href="index.css" />
+    <link
+      rel="stylesheet"
+      href="all.css"
+    />
+    <link rel="stylesheet" href="mobile.css">
+    <link
+      rel="stylesheet"
+      href="bootstrap.css"
+    />
+    <script src="all.js"></script>
+    <script src="bootstrap.js"></script>
+  </head>
+  <body>
+    <svg
+      class="wave"
+      viewBox="0 0 1440 320"
+      width="100%"
+      height="100"
+      preserveAspectRatio="none"
+    >
+      <path
+        fill="#000000"
+        d="M0,160 C480,240 960,80 1440,160 L1440,320 L0,320 Z"
+      ></path>
+    </svg>
+    <div class="form_container" id="login_container">
+      <form action="" id="login_form">
+        <h2 class="form_header"><i class="fas fa-graduation-cap"></i> Crixy</h2>
+        <p class="motto">Smart schooling simplified</p>
+        <div class="form-floating mb-3">
+          <input
+            type="email"
+            class="form-control"
+            id="email_login"
+            placeholder="name@example.com"
+            required
+          />
+          <label for="email_login"
+            ><i class="fas fa-envelope"></i> Email address</label
+          >
+        </div>
+        <div class="form-floating">
+          <input
+            type="password"
+            class="form-control"
+            id="password_login"
+            placeholder="Password"
+            type="password"
+            required
+          />
+          <label for="password_login"
+            ><i class="fas fa-lock"></i> Password</label
+          >
+        </div>
+        <div class="flex_section">
+          <span
+            ><input type="checkbox" name="rememberMe" id="rememberMe" />
+            Remember me</span
+          >
+          <a
+            href="#"
+            target="_blank"
+            id="forget_password_link"
+            class="form_links"
+            >Forgot Password</a
+          >
+        </div>
+        <button id="login_btn">
+          Log in <i class="fas fa-arrow-right-to-bracket"></i>
+        </button>
+        <span>
+          <small class="call_to_sign">
+            Dont have an account?<a
+              href="javascript:void(0)"
+              onclick="changetoSign()"
+              class="form_links"
+              id="signup_link"
+              >Sign up</a
+            >
+          </small>
+        </span>
+        <hr />
+        <span style="font-size: 14px">or</span>
+        <hr />
+        <span class="socials_section">
+          <button class="socials_btn"><i class="fab fa-google"></i></button>
+          <button class="socials_btn"><i class="fab fa-facebook"></i></button>
+          <button class="socials_btn"><i class="fab fa-github"></i></button>
+        </span>
+      </form>
+    </div>
+    
+    <script src="index.js"></script>
+    <script>
+    const form_login =  document.getElementById("login_form")
+      form_login.addEventListener('submit' , (e)=>{
+        e.preventDefault();
+      });
+      </script>
+      <script src="login.js"></script>
+  </body>
+</html>

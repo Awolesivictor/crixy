@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login-page</title>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="mobile.css">
+    <link
+      rel="stylesheet"
+      href="all.css"
+    />
+    <link
+      rel="stylesheet"
+      href="bootstrap.css"
+    />
+    <script src="all.js"></script>
+    <script src="bootstrap.js"></script>
+  </head>
+  <body>
+    <svg
+      class="wave"
+      viewBox="0 0 1440 320"
+      width="100%"
+      height="100"
+      preserveAspectRatio="none"
+    >
+      <path
+        fill="#000000"
+        d="M0,160 C480,240 960,80 1440,160 L1440,320 L0,320 Z"
+      ></path>
+    </svg>
+    <div class="form_container" id="signup_container">
+      <form action="" id="signup_form">
+        <h2 class="form_header"><i class="fas fa-graduation-cap"></i> Crixy</h2>
+        <p class="motto">Welcome to crixy signup to get started</p>
+        <div class="form-floating mb-3">
+          <input
+            type="text"
+            class="form-control"
+            id="userName_signup"
+            name="userName_signup"
+            placeholder="eg @johndoe"
+            required
+          />
+          <label for="userName_signup"
+            ><i class="fas fa-user"></i> User Name
+          </label>
+        </div>
+        <div class="form-floating mb-3">
+          <input
+            type="email"
+            name="email_signUp"
+            id="email_signUp"
+            class="form-control"
+            placeholder="eg johndoe@gmail.com"
+            required
+          />
+          <label for="email_signUp"
+            ><i class="fas fa-envelope"></i> Enter Email</label
+          >
+        </div>
+        <div class="form-floating mb-3">
+          <input
+            type="password"
+            name="password_signup"
+            id="Password_signup"
+            class="form-control"
+            maxlength="8"
+            placeholder="8 digits max"
+            required
+          />
+          <label for="Password_signup"
+            ><i class="fas fa-lock"></i> Enter Password
+          </label>
+        </div>
+        <div class="form-floating mb-3">
+          <input
+            type="password"
+            name="password_signup_confirm"
+            id="Password_signup_confirm"
+            placeholder="Password must match"
+            required
+            maxlength="8"
+            class="form-control"
+          />
+          <label for="Password_signup_confirm"
+            ><i class="fas fa-lock"></i> Confirm password</label
+          >
+          <p id="confirmMessage"></p>
+        </div>
+        <button id="signup_btn" >
+          Sign Up <i class="fas fa-arrow-right-to-bracket"></i>
+        </button>
+        <p id="formMessage"></p>
+        <small class="call_to_log"
+          >Already have an account?
+          <a
+            href="javascript:void(0)"
+            onclick="changetoLog()"
+            class="form_links"
+            >Log in</a
+          >
+        </small>
+        <hr />
+        <span>or</span>
+        <hr />
+        <span class="socials_section">
+          <button class="socials_btn"><i class="fab fa-google"></i></button>
+          <button class="socials_btn"><i class="fab fa-facebook"></i></button>
+          <button class="socials_btn"><i class="fab fa-github"></i></button>
+        </span>
+      </form>
+    </div>
+    <script src="index.js"></script>
+      <script src="signup.js"></script>
+  </body>
+</html>

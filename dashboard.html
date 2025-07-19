@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DASHBOARD</title>
+    <link rel="stylesheet" href="index.css" />
+    <link
+      rel="stylesheet"
+      href="all.css"
+    />
+    <link rel="stylesheet" href="mobile.css">
+    <link
+      rel="stylesheet"
+      href="bootstrap.css"
+    />
+    <script src="all.js"></script>
+    <script src="bootstrap.js"></script>
+    <style>
+        .hero-light{
+            display: block;
+            padding:20px;
+            width:60vw;
+            /* border:10px dashed orange; */
+            border-radius: 20px;
+            background-color: #ebeaea;
+            box-shadow: inset -3px -3px 10px #464545;
+            margin:0 auto;
+            height: 100%;
+        }
+    </style>
+  </head>
+  <body>
+    <h2 class="form_header"><i class="fas fa-graduation-cap"></i> Crixy</h2>
+    <p  style="text-align: center;">Smart schooling simplified</p>
+    <div class="hero-light">
+        <h2>YOUR INFORMATION:</h2>
+        <p>Hello <span id="UserName"></span> Welcome to crixy</p>
+        <p id="emailInfo"></p>
+        <p id="passwordInfo"></p>
+        <button id="logOut" class="btn btn-warning"> <i class="fas fa-door-open"></i> Log out</button> <button id="deleteAccount" class="btn btn-danger"><i class="fas fa-trash"></i> Delete Account </button>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+ 
+     var emailInfo = document.getElementById("emailInfo");
+     var passwordInfo = document.getElementById("passwordInfo");
+     var userName = document.getElementById("UserName");
+
+        var username = localStorage.getItem("currentUser");
+       var password = localStorage.getItem("currentUserPassword");
+       var email = localStorage.getItem("currentUserEmail");
+        emailInfo.innerHTML = "Email: " + email;
+        passwordInfo.innerHTML = "Password: " + password;
+        userName.innerHTML = username
+        document.getElementById("logOut").addEventListener("click",()=>{
+            window.location.href = "index.html";
+        });
+        document.getElementById("deleteAccount").addEventListener("click",()=>{
+            alert("ALL RECORD OF THIS ACCOUNT HAS BEEN DELETED");
+            alert("REMOVING ACCOUNT DATA IN 3 SECONDS")
+            let users = JSON.parse(localStorage.getItem("users"));
+            let updatedUser = users.filter(user => user.userName !== username);
+            localStorage.setItem("users" , JSON.stringify(updatedUser))
+            setTimeout(()=>{
+                window.location.href="index.html"
+            },3000)
+        })})
+    </script>
+    </body>
